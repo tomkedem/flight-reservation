@@ -1,4 +1,4 @@
 ﻿Flight Reservation Details:
-Destination: Tel Aviv
-Departure Date: 2025-06-11
-Return Date: 2025-06-15
+Destination: Yafo
+Departure Date: 2025-07-05
+Return Date: 2025-07-20

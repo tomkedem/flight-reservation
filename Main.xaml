@@ -218,7 +218,7 @@
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Build a simple process that simulates a flight reservation for users. You must request input from the user regarding the destination, departure date, and return date. Then add the user input to an array variable. Lastly, write a text file where you confirm the reservation details using the array variable.&#xD;&#xA;&#xD;&#xA;Output: Write a text file using the data from the array variable to confirm the user's reservation. " DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="927,1178" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Build a simple process that simulates a flight reservation for users. You must request input from the user regarding the destination, departure date, and return date. Then add the user input to an array variable. Lastly, write a text file where you confirm the reservation details using the array variable.&#xD;&#xA;&#xD;&#xA;Output: Write a text file using the data from the array variable to confirm the user's reservation. " DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="927,1351" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="reservationDetails" />
       <Variable x:TypeArguments="x:String" Name="strDestination" />
@@ -254,6 +254,7 @@
         <InArgument x:TypeArguments="s:String[]">[{strDestination, strDepartureDate, strReturnDate}]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:WriteTextFile File="{x:Null}" DisplayName="Write a text file confirming reservation details using the array variable" Encoding="UTF-8" FileName="FlightReservationConfirmation.txt" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[&quot;Flight Reservation Details:&quot; &amp; Environment.NewLine &amp;&#xD;&#xA;&quot;Destination: &quot; &amp; reservationDetails(0) &amp; Environment.NewLine &amp;&#xD;&#xA;&quot;Departure Date: &quot; &amp; reservationDetails(1) &amp; Environment.NewLine &amp;&#xD;&#xA;&quot;Return Date: &quot; &amp; reservationDetails(2)]" />
+    <ui:WriteTextFile File="{x:Null}" DisplayName="Write a text file confirming reservation details using the array variable" Encoding="UTF-8" FileName="FlightReservationConfirmation.txt" sap:VirtualizedContainerService.HintSize="434,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[&quot;Flight Reservation Details:&quot; &amp; Environment.NewLine &amp;&#xD;&#xA;&quot;Destination: &quot; &amp; reservationDetails(0) &amp; Environment.NewLine &amp;&#xD;&#xA;&quot;Departure Date: &quot; &amp; reservationDetails(1) &amp; Environment.NewLine &amp;&#xD;&#xA;&quot;Return Date: &quot; &amp; reservationDetails(2)]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Reservation details have been successfully generated as a text file.&quot;]" />
   </Sequence>
 </Activity>
